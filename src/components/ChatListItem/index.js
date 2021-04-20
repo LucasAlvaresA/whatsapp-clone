@@ -15,7 +15,7 @@ export default function ChatListItem({onClick, active, data}) {
             </div>
             <div className="chatListItem-line">
                 <div className="chatListItem--lastMsg">
-                    <p>boa tarde mano salve meu primo boa tarde mano salve meu primo boa tarde mano salve meu primo</p>
+                    <p>Oi,estou sim,e você?</p>
                 </div>
             </div>
         </div>

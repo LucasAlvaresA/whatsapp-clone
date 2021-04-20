@@ -14,10 +14,10 @@ import SearchIcon from '@material-ui/icons/Search';
 export default function App() {
 
   const [chatlist, setChatList] = useState([
-    {chatId: 1, title: "Usuario 1", image: "https://www.w3schools.com/howto/img_avatar2.png"},
-    {chatId: 2, title: "Usuario 2", image: "https://www.w3schools.com/howto/img_avatar2.png"},
-    {chatId: 3, title: "Usuario 3", image: "https://www.w3schools.com/howto/img_avatar2.png"},
-    {chatId: 4, title: "Usuario 4", image: "https://www.w3schools.com/howto/img_avatar2.png"},
+    {chatId: 1, title: "Usuario 1", image: "https://www.w3schools.com/w3images/avatar6.png"},
+    // {chatId: 2, title: "Usuario 2", image: "https://www.w3schools.com/w3images/avatar2.png"},
+    // {chatId: 3, title: "Usuario 3", image: "https://www.w3schools.com/w3images/avatar5.png"},
+    // {chatId: 4, title: "Usuario 4", image: "https://www.w3schools.com/howto/img_avatar.png"},
   ]);
   const [activeChat, setActiveChat] = useState({});
   const [user, setUser] = useState({

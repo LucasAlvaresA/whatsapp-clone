@@ -29,52 +29,9 @@ export default function ChatWindow({user}) {
  const [text, setText] = useState("");
  const [listening, setListening] = useState(false);
  const [list, setList] = useState([
-    {author:123, body: "oi oi oi oi oi "},
-    {author:123, body: "oi oi oi oi oi "},
-    {author:1234, body: "oi oi oi oi oi "},
-    {author:123, body: "oi oi oi oi oi "},
-    {author:123, body: "oi oi oi oi oi "},
-    {author:1234, body: "oi oi oi oi oi "},
-    {author:123, body: "oi oi oi oi oi "},
-    {author:123, body: "oi oi oi oi oi "},
-    {author:1234, body: "oi oi oi oi oi "},
-    {author:123, body: "oi oi oi oi oi "},
-    {author:123, body: "oi oi oi oi oi "},
-    {author:1234, body: "oi oi oi oi oi "},
-    {author:123, body: "oi oi oi oi oi "},
-    {author:123, body: "oi oi oi oi oi "},
-    {author:1234, body: "oi oi oi oi oi "},
-    {author:123, body: "oi oi oi oi oi "},
-    {author:123, body: "oi oi oi oi oi "},
-    {author:1234, body: "oi oi oi oi oi "},
-    {author:123, body: "oi oi oi oi oi "},
-    {author:123, body: "oi oi oi oi oi "},
-    {author:1234, body: "oi oi oi oi oi "},
-    {author:123, body: "oi oi oi oi oi "},
-    {author:123, body: "oi oi oi oi oi "},
-    {author:1234, body: "oi oi oi oi oi "},
-    {author:123, body: "oi oi oi oi oi "},
-    {author:123, body: "oi oi oi oi oi "},
-    {author:1234, body: "oi oi oi oi oi "},
-    {author:123, body: "oi oi oi oi oi "},
-    {author:123, body: "oi oi oi oi oi "},
-    {author:1234, body: "oi oi oi oi oi "},
-    {author:1234, body: "oi oi oi oi oi "},
-    {author:123, body: "oi oi oi oi oi "},
-    {author:123, body: "oi oi oi oi oi "},
-    {author:1234, body: "oi oi oi oi oi "},
-    {author:123, body: "oi oi oi oi oi "},
-    {author:123, body: "oi oi oi oi oi "},
-    {author:1234, body: "oi oi oi oi oi "},
-    {author:123, body: "oi oi oi oi oi "},
-    {author:123, body: "oi oi oi oi oi "},
-    {author:1234, body: "oi oi oi oi oi "},
-    {author:123, body: "oi oi oi oi oi "},
-    {author:123, body: "oi oi oi oi oi "},
-    {author:1234, body: "oi oi oi oi oi "},
-    {author:123, body: "oi oi oi oi oi "},
-    {author:123, body: "oi oi oi oi oi "},
-    {author:1234, body: "ta perdido meu nobre? "}, 
+    {author:123, body: "Olá!"},
+    {author:123, body: "Tudo Bem?"},
+    {author:1234, body: "Oi,estou sim,e você?"},
  ]);
 
  useEffect(()=>{
@@ -121,8 +78,8 @@ export default function ChatWindow({user}) {
        <div className="chatWindow--header">
 
           <div className="chatWindow--headerinfo">
-            <img className="chatWindow--avatar" src="https://www.w3schools.com/howto/img_avatar2.png" alt="" />
-            <div className="chatWindow--name">Lucas Álvares</div>
+            <img className="chatWindow--avatar" src="https://www.w3schools.com/w3images/avatar6.png" alt="" />
+            <div className="chatWindow--name">Usuario 1</div>
           </div>
 
           <div className="chatWindow--headerbuttons">
