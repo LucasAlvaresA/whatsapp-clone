@@ -5,7 +5,7 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
 export default function NewChat({user, chatlist, show, setShow}) {
 
-    const [list,setList] = useState([
+    const [list] = useState([
         {id: 1,avatar: "https://www.w3schools.com/w3images/avatar6.png",name: "Usuario 1"},
         {id: 2,avatar: "https://www.w3schools.com/w3images/avatar2.png",name: "Usuario 2"},
         {id: 3,avatar: "https://www.w3schools.com/w3images/avatar5.png",name: "Usuario 3"},

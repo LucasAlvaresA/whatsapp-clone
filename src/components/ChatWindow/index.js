@@ -28,7 +28,7 @@ export default function ChatWindow({user}) {
  const [emojiOpen, setEmojiOpen] = useState(false);
  const [text, setText] = useState("");
  const [listening, setListening] = useState(false);
- const [list, setList] = useState([
+ const [list] = useState([
     {author:123, body: "Olá!"},
     {author:123, body: "Tudo Bem?"},
     {author:1234, body: "Oi,estou sim,e você?"},
