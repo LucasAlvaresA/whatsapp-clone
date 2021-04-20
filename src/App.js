@@ -29,7 +29,7 @@ export default function App() {
   const [showNewChat, setShowNewChat] = useState(false);
 
   const handleNewChat = () => {
-    setShowNewChat(true);
+    setShowNewChat(true)
   }
 
   return (
