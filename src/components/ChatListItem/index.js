@@ -1,7 +1,7 @@
 import React from 'react';
 import "./ChatListItem.css";
 
-export default ({onClick, active, data}) => {
+export default function ChatListItem({onClick, active, data}) {
  return (
     <div 
         className={`chatListItem ${active ? "active" : ""}`}

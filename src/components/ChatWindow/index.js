@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import EmojiPicker from "emoji-picker-react";
 import "./ChatWindow.css";
+
+import MessageItem from "../MessageItem";
 
 import SearchIcon from '@material-ui/icons/Search';
 import AttachFileIcon from '@material-ui/icons/AttachFile';
@@ -9,9 +11,12 @@ import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
 import CloseIcon from '@material-ui/icons/Close';
 import SendIcon from '@material-ui/icons/Send';
 import MicIcon from '@material-ui/icons/Mic';
-import { EmojiObjects } from '@material-ui/icons';
+// import { EmojiObjects } from '@material-ui/icons';
 
-export default () => {
+export default function ChatWindow({user}) {
+
+  const body = useRef();
+
   // Funcionamento do mic
 
  let recognition = null;
@@ -23,6 +28,60 @@ export default () => {
  const [emojiOpen, setEmojiOpen] = useState(false);
  const [text, setText] = useState("");
  const [listening, setListening] = useState(false);
+ const [list, setList] = useState([
+    {author:123, body: "oi oi oi oi oi "},
+    {author:123, body: "oi oi oi oi oi "},
+    {author:1234, body: "oi oi oi oi oi "},
+    {author:123, body: "oi oi oi oi oi "},
+    {author:123, body: "oi oi oi oi oi "},
+    {author:1234, body: "oi oi oi oi oi "},
+    {author:123, body: "oi oi oi oi oi "},
+    {author:123, body: "oi oi oi oi oi "},
+    {author:1234, body: "oi oi oi oi oi "},
+    {author:123, body: "oi oi oi oi oi "},
+    {author:123, body: "oi oi oi oi oi "},
+    {author:1234, body: "oi oi oi oi oi "},
+    {author:123, body: "oi oi oi oi oi "},
+    {author:123, body: "oi oi oi oi oi "},
+    {author:1234, body: "oi oi oi oi oi "},
+    {author:123, body: "oi oi oi oi oi "},
+    {author:123, body: "oi oi oi oi oi "},
+    {author:1234, body: "oi oi oi oi oi "},
+    {author:123, body: "oi oi oi oi oi "},
+    {author:123, body: "oi oi oi oi oi "},
+    {author:1234, body: "oi oi oi oi oi "},
+    {author:123, body: "oi oi oi oi oi "},
+    {author:123, body: "oi oi oi oi oi "},
+    {author:1234, body: "oi oi oi oi oi "},
+    {author:123, body: "oi oi oi oi oi "},
+    {author:123, body: "oi oi oi oi oi "},
+    {author:1234, body: "oi oi oi oi oi "},
+    {author:123, body: "oi oi oi oi oi "},
+    {author:123, body: "oi oi oi oi oi "},
+    {author:1234, body: "oi oi oi oi oi "},
+    {author:1234, body: "oi oi oi oi oi "},
+    {author:123, body: "oi oi oi oi oi "},
+    {author:123, body: "oi oi oi oi oi "},
+    {author:1234, body: "oi oi oi oi oi "},
+    {author:123, body: "oi oi oi oi oi "},
+    {author:123, body: "oi oi oi oi oi "},
+    {author:1234, body: "oi oi oi oi oi "},
+    {author:123, body: "oi oi oi oi oi "},
+    {author:123, body: "oi oi oi oi oi "},
+    {author:1234, body: "oi oi oi oi oi "},
+    {author:123, body: "oi oi oi oi oi "},
+    {author:123, body: "oi oi oi oi oi "},
+    {author:1234, body: "oi oi oi oi oi "},
+    {author:123, body: "oi oi oi oi oi "},
+    {author:123, body: "oi oi oi oi oi "},
+    {author:1234, body: "ta perdido meu nobre? "}, 
+ ]);
+
+ useEffect(()=>{
+    if(body.current.scrollHeight > body.current.offsetHeight) {
+      body.current.scrollTop = body.current.scrollHeight - body.current.offsetHeight;
+    }
+ }, [list]);
 
  const handleEmojiClick = (e, emojiObject) => {
     setText( text + emojiObject.emoji);
@@ -84,8 +143,14 @@ export default () => {
 
        </div>
 
-       <div className="chatWindow-body">
-
+       <div ref={body} className="chatWindow-body">
+            {list.map((item, key)=>(
+              <MessageItem
+                  key={key}
+                  data={item}
+                  user={user}
+              />
+            ))}
        </div>
 
        <div 
