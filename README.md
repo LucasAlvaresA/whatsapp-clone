@@ -6,6 +6,8 @@
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
 </div>
 
+[View Demo](https://lucasalvaresa.github.io/whatsapp-clone/#/)
+
 ![](image1.png) 
 ![](image2.png) 
 ![](image3.png) 
